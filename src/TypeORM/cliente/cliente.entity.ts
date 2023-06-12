@@ -17,3 +17,22 @@ export class Cliente {
   @Column()
   email: string;
 }
+
+export class createCliente {
+  readonly 'codigo': number;
+  readonly 'usuario': string;
+  readonly 'senha': string;
+  readonly 'nome': string;
+  readonly 'email': string;
+}
+
+export class updateCliente {
+  readonly 'usuario': string;
+  readonly 'senha': string;
+  readonly 'nome': string;
+  readonly 'email': string;
+}
+
+
+
+

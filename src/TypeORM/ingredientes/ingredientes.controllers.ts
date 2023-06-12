@@ -1,6 +1,7 @@
-import { Controller, Get } from '@nestjs/common';
+/* eslint-disable prettier/prettier */
+import { Body, Controller, Get, Param, Post, Delete, Put } from '@nestjs/common';
 import { IngredientesService } from './ingredientes.service';
-import { Ingredientes } from './ingredientes.entity';
+import { Ingredientes, IngredientesDTO } from './ingredientes.entity';
 
 
 @Controller('ingredientes')
@@ -11,4 +12,7 @@ export class IngredienteController {
   async findAll(): Promise<Ingredientes[]> {
     return this.ingredientesService.findAll();
   }
+
+ 
+
 }

@@ -1,7 +1,8 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Ingredientes } from './ingredientes.entity';
+import { Ingredientes, IngredientesDTO } from './ingredientes.entity';
 
 
 @Injectable()
@@ -19,7 +20,8 @@ export class IngredientesService {
     return this.ingredientesRepository.findOneBy({ codigo });
   }
 
-  async remove(codigo: number): Promise<void> {
-    await this.ingredientesRepository.delete( codigo );
+ 
   }
+
+
 }

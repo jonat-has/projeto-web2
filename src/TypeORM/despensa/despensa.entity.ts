@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, NumericType } from 'typeorm';
 
 @Entity()
 export class Despensa {
@@ -7,4 +7,8 @@ export class Despensa {
 
  @Column()
  codigo_cliente: number;
+}
+
+export class DespensaUPDT {
+  readonly codigo_cliente: number;
 }

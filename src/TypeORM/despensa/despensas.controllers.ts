@@ -1,6 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param, Body, Post, Delete, Put } from '@nestjs/common';
 import { DespensaService } from './despensa.service'
-import { Despensa } from './despensa.entity';
+import { Despensa, DespensaUPDT } from './despensa.entity';
 
 @Controller('despensa')
 export class DespensaController {
@@ -10,4 +10,6 @@ export class DespensaController {
   async findAll(): Promise<Despensa[]> {
     return this.despensaService.findAll();
   }
+
+  
 }
